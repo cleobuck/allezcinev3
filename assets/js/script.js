@@ -73,7 +73,7 @@ if (performance.navigation.type == 1) {
 
                                                           /*JUMBOTRON CAROUSEL */
 
-///when page loads
+///when page loads 
 
 let JumboSlides = document.getElementsByClassName("mySlides");
 let myToggle = document.getElementsByClassName("myToggle");
@@ -115,15 +115,51 @@ document.addEventListener("click", (event) => {
             JumboSlides[myToggleArray.indexOf(event.target)].classList.add("jumboSlide");
             currentToggle = event.target;
             currentToggle.classList.add("jumboFirst");
-
-           
             JumboSlides[myToggleArray.indexOf(event.target)].style.display = "block";
-            myToggle[0]
+
     }  
     
     
     
 })
+
+let automaticToggle = 1;
+
+
+
+/*Automatic sliding */
+
+ setInterval( () => {
+    let currentSlide = JumboSlides[automaticToggle];
+    let currentToggle = myToggle[automaticToggle];
+   
+   
+    currentToggle.classList.remove("jumboFirst1")
+
+    for (i= 0 ; i < JumboSlides.length ; i++) {
+        
+        if (JumboSlides[i].classList.contains("jumboSlideOut") ) {
+            JumboSlides[i].classList.remove("jumboSlideOut")
+        }
+        if (JumboSlides[i].classList.contains("jumboSlide") ) {
+            JumboSlides[i].classList.remove("jumboSlide");
+            JumboSlides[i].classList.add("jumboSlideOut");
+
+        }
+   
+    }  
+        currentToggle.classList.add("jumboFirst")
+        currentSlide.classList.add("jumboSlide");
+        currentSlide.style.display = "block";
+
+        automaticToggle ++;
+
+        if (automaticToggle == 4) {
+            automaticToggle = 0;
+        }
+
+   }  , 2000)
+
 
 
                                                                          /* API */
@@ -395,10 +431,6 @@ moreMovieBtn.addEventListener("click", () => {
     }
     
 })
-
-
-
-
                                             /*Featured Series */
 
 
@@ -421,7 +453,7 @@ let cardsFeatSeriesSmall = Array.from(cardsFeatSeries[i].querySelectorAll("small
 featSeriesImg = featSeriesImg.concat(cardsFeatSeriesImg);
 featSeriesTitle = featSeriesTitle.concat(cardsFeatSeriesH5);
 featSeriesYear = featSeriesYear.concat(cardsFeatSeriesSmall);
-}
+
 
 for (let i=1; i<cardsFeatSeries.length; i++) {
     cardsFeatSeries[i].style.display = "none";
@@ -506,16 +538,6 @@ moreSeriesBtn.addEventListener("click", () => {
     
 })
                                               
-                                              
-
-
-
-
-
-
-
-
-
 
 /*                                             CREATION DU BOUTON*/
 let btn2=document.createElement('A');
@@ -532,10 +554,21 @@ let buttonUp=document.getElementById("buttonUp")
 /*                                       DISPARITION DU BOUTON */
 document.addEventListener("DOMContentLoaded",()=>{
     window.onscroll = (function (event) {
-        if (window.pageYOffset >= 500) {
+        if (window.pageYOffset >= 800) {
             buttonUp.style.display = "inline";
         } else {
             buttonUp.style.display = "none";
         };
     });
 })
+
+}
+
+
+
+
+
+    
+    
+
+

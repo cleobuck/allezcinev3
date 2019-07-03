@@ -1,7 +1,18 @@
-
+html {
+    scroll-behavior: smooth;
+}
 ///   --------------------------------JUMBOTRON + NAV
+.searchBar{
+    .searchBarSec{
+        border: 0px;
+        background-color: rgba(0, 0, 0, 0.486);
+        border-radius: 25px !important;
+        color: white;
+    }
+}
 .fa-search {
     right: 0;
+    color: white;
 }
 
 .nav-link:hover, 
@@ -24,17 +35,25 @@
     overflow: hidden;
     z-index: -2;
     display: none;
+    filter: brightness(40%);
     &:first-child {
         display: block;
     }
-
     img  {
-        margin-top: -800px;
         width: 100%;
     }
-
 }
 
+#navbarSupportedContent{
+    .navbar-nav{
+        &:hover{
+            background-color: #dc3545 !important;
+        }
+    }
+    .dropdown-menu{
+        margin-top: 5px;
+    }
+}
 
 body {
     overflow: hidden;
@@ -69,6 +88,23 @@ body {
     border-color: #dc3545;
   }
 
+  /* Media Queries */
+
+  @media screen and (max-width: 800px) {
+  .jumbotron-fluid h1 {
+      font-size: 18px !important;
+  }
+    .jumbotron-fluid span {
+        font-size: 20px !important;
+    }
+    .jumbotron-fluid p, .jumbotron-fluid button {
+        display: none;
+    }
+    .mySlides img {
+        height: 100%;
+    }
+
+  }
 
 
   
@@ -386,5 +422,168 @@ body {
     }
 }
 
+// ------------------------ trailer shop movies
+.movieslist{
+    color: rgb(53, 106, 175);
+}
 
 
+// ------------------------ footer
+
+.footer {
+    background-color: rgb(24, 24, 24);
+    .form-control {
+        border: 0px;
+        border-radius: 0px;
+    }
+    .form-control-plaintext {
+        color: rgb(192, 39, 39);
+        padding-left: 15px;
+        font-size: 2em;
+    }
+    .btn {
+        background-color: rgb(192, 39, 39);
+        color: white;
+        border: 0px;
+        border-radius: 0px;
+        &:hover {
+            background-color: white;
+            color: rgb(192, 39, 39);
+        }
+    }
+}
+
+.release {
+    thead {
+        th {
+            border: 0px;
+            color: rgb(209, 209, 209);
+        }
+    }
+    tbody {
+        td {
+            border: 0px;
+            color: rgb(114, 114, 114);
+            padding: 10px;
+            &:hover {
+                cursor: pointer;
+                color: rgb(209, 209, 209);
+            }
+        }
+    }
+}
+
+.movies {
+    thead {
+        th {
+            border: 0px;
+            color: rgb(209, 209, 209);
+        }
+    }
+    tbody {
+        td {
+            border: 0px;
+            color: rgb(114, 114, 114);
+            padding: 10px;
+            &:hover {
+                cursor: pointer;
+                color: rgb(209, 209, 209);
+            }
+        }
+    }
+}
+
+.previewmovies {
+    thead {
+        th {
+            border: 0px;
+            color: rgb(209, 209, 209);
+        }
+    }
+    tbody {
+        .badge-secondary {
+            border-radius: 0px;
+            background-color: rgb(73, 73, 73);
+            &:hover {
+                background-color: rgb(168, 168, 168);
+                color: rgb(37, 37, 37);
+            }
+        }
+    }
+}
+
+.latestmovies {
+    thead {
+        th {
+            border: 0px;
+            color: rgb(209, 209, 209);
+        }
+    }
+    tbody {
+        td {
+            border: 0px;
+            color: rgb(114, 114, 114);
+            padding: 7px;
+            &:hover {
+                cursor: pointer;
+                color: rgb(209, 209, 209);
+            }
+        }
+    }
+}
+
+.greyrect {
+    width: 125px;
+    height: 50px;
+    background-color: grey;
+}
+
+.allezcine {
+    thead {
+        th {
+            border: 0px;
+            color: rgb(209, 209, 209);
+        }
+        span {
+            color: rgb(192, 39, 39);
+        }
+    }
+    tbody {
+        td {
+            color: rgb(114, 114, 114);
+            padding: 0px;
+        }
+        img {
+            width: 65px;
+            overflow: hidden;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.social {
+    .txt {
+        color: white;
+        text-align: center;
+    }
+    .icons {
+        .fa-facebook-f,
+        .fa-twitter,
+        .fa-linkedin-in,
+        .fa-youtube,
+        .fa-google-plus-g {
+            color: white;
+            font-size: 1em;
+            margin: 10px;
+            padding: 5px;
+            border: 3px solid white;
+            width: 35px;
+            height: 35px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
