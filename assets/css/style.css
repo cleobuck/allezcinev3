@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .searchBar .searchBarSec {
@@ -14,8 +15,7 @@ html {
   color: white;
 }
 
-.nav-link:hover,
-.imgContainerShop .card-img-top:hover, .myToggle {
+.nav-link:hover .imgContainerShop .card-img-top:hover, .nav-link:hover .myToggle {
   cursor: pointer;
 }
 
@@ -45,7 +45,7 @@ html {
   width: 100%;
 }
 
-#navbarSupportedContent .navbar-nav:hover {
+#navbarSupportedContent .nav-item:hover {
   background-color: #dc3545 !important;
 }
 
@@ -372,7 +372,7 @@ body {
 #social-net ul {
   position: absolute;
   top: 0;
-  z-index: 8;
+  z-index: 10;
 }
 
 #firstMovieModal .modal-content, #secondMovieModal .modal-content, #thirdMovieModal .modal-content, #fourthMovieModal .modal-content, #fifthMovieModal .modal-content {
@@ -468,10 +468,9 @@ body {
   border: 0px;
 }
 
-.movieslist {
-  color: #356aaf;
-}
-
+/*.trailerContent{
+    color: rgb(53, 106, 175);
+}*/
 .footer {
   background-color: #181818;
 }
@@ -578,17 +577,12 @@ body {
 }
 
 .allezcine tbody td {
-  border: 0px;
   color: #727272;
   padding: 0px;
 }
 
-.allezcine tbody td .img-thumbnail {
-  border-radius: 0px;
-}
-
 .allezcine tbody img {
-  width: 100px;
+  width: 65px;
   overflow: hidden;
 }
 
@@ -607,10 +601,68 @@ body {
 .social .icons .fa-youtube,
 .social .icons .fa-google-plus-g {
   color: white;
-  font-size: 1em;
+  font-size: 2em;
   margin: 10px;
   padding: 5px;
   border: 3px solid white;
   width: 35px;
   height: 35px;
+}
+
+.social .icons .fa-facebook-f:hover,
+.social .icons .fa-twitter:hover,
+.social .icons .fa-linkedin-in:hover,
+.social .icons .fa-youtube:hover,
+.social .icons .fa-google-plus-g:hover {
+  cursor: pointer;
+}
+
+.social .icons .fa-facebook-f:hover {
+  color: #3c5a99;
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.social .icons .fa-twitter:hover {
+  color: #1da1f2;
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.social .icons .fa-linkedin-in:hover {
+  color: #0077b5;
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.social .icons .fa-youtube:hover {
+  color: red;
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.social .icons .fa-google-plus-g:hover {
+  color: #db4437;
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }

@@ -109,9 +109,7 @@ document.addEventListener("click", (event) => {
             event.target.classList.add("jumboFirst")
             
         }
-  
  
-       
             JumboSlides[myToggleArray.indexOf(event.target)].classList.add("jumboSlide");
             currentToggle = event.target;
             currentToggle.classList.add("jumboFirst");
@@ -143,6 +141,7 @@ let automaticToggle = 1;
         }
         if (JumboSlides[i].classList.contains("jumboSlide") ) {
             JumboSlides[i].classList.remove("jumboSlide");
+            JumboSlides[i].classList.remove("jumboFirst");
             JumboSlides[i].classList.add("jumboSlideOut");
 
         }
@@ -453,7 +452,7 @@ let cardsFeatSeriesSmall = Array.from(cardsFeatSeries[i].querySelectorAll("small
 featSeriesImg = featSeriesImg.concat(cardsFeatSeriesImg);
 featSeriesTitle = featSeriesTitle.concat(cardsFeatSeriesH5);
 featSeriesYear = featSeriesYear.concat(cardsFeatSeriesSmall);
-
+}
 
 for (let i=1; i<cardsFeatSeries.length; i++) {
     cardsFeatSeries[i].style.display = "none";
@@ -552,23 +551,12 @@ let buttonUp=document.getElementById("buttonUp")
 
 
 /*                                       DISPARITION DU BOUTON */
-document.addEventListener("DOMContentLoaded",()=>{
-    window.onscroll = (function (event) {
+document.addEventListener("DOMContentLoaded", () => {
+    window.onscroll = (event) => {
         if (window.pageYOffset >= 800) {
             buttonUp.style.display = "inline";
         } else {
             buttonUp.style.display = "none";
         };
-    });
-})
-
-}
-
-
-
-
-
-    
-    
-
-
+    };
+}) 

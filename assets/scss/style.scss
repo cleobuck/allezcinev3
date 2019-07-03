@@ -18,9 +18,10 @@ html {
     color: white;
 }
 
-.nav-link:hover, 
-.imgContainerShop .card-img-top:hover, .myToggle {
-    cursor: pointer;
+.nav-link:hover {
+    .imgContainerShop .card-img-top:hover, .myToggle {
+        cursor: pointer;
+    }
 }
 
 
@@ -48,7 +49,7 @@ html {
 }
 
 #navbarSupportedContent{
-    .navbar-nav{
+    .nav-item{
         &:hover{
             background-color: #dc3545 !important;
         }
@@ -331,7 +332,7 @@ body {
     ul {
         position: absolute;
         top: 0;
-        z-index: 8;
+        z-index: 10;
     }
 }
 
@@ -426,9 +427,9 @@ body {
 }
 
 // ------------------------ trailer shop movies
-.movieslist{
+/*.trailerContent{
     color: rgb(53, 106, 175);
-}
+}*/
 
 
 // ------------------------ footer
@@ -571,14 +572,16 @@ body {
         color: white;
         text-align: center;
     }
+
     .icons {
+
         .fa-facebook-f,
         .fa-twitter,
         .fa-linkedin-in,
         .fa-youtube,
         .fa-google-plus-g {
             color: white;
-            font-size: 1em;
+            font-size: 2em;
             margin: 10px;
             padding: 5px;
             border: 3px solid white;
@@ -587,6 +590,31 @@ body {
             &:hover{
                 cursor: pointer;
             }
+        }
+        .fa-facebook-f:hover{
+            color: rgb(60,90,153);
+            transform: scale(1.1, 1.1);
+            transition: 0.4s;
+        }
+        .fa-twitter:hover{
+            color: rgb(29,161,242);
+            transform: scale(1.1, 1.1);
+            transition: 0.4s;
+        }
+        .fa-linkedin-in:hover{
+            color: rgb(0,119,181);
+            transform: scale(1.1, 1.1);
+            transition: 0.4s;
+        }
+        .fa-youtube:hover{
+            color: rgb(255,0,0);
+            transform: scale(1.1, 1.1);
+            transition: 0.4s;
+        }
+        .fa-google-plus-g:hover{
+            color: rgb(219,68,55);
+            transform: scale(1.1, 1.1);
+            transition: 0.4s;
         }
     }
 }
