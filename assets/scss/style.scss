@@ -1,10 +1,18 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-   
+}
+
+html, body {
+    height: 100%;
 }
 
 ///   --------------------------------JUMBOTRON + NAV
+
+
+.navbar-toggler, .navbar-toggler-icon {
+    color: white !important;
+}
 .searchBar{
     .searchBarSec{
         border: 0px;
@@ -111,6 +119,11 @@ body {
     .mySlides img {
         height: 100%;
     }
+    .modal-18 {
+        h2 {
+            text-align: center;
+        }
+    }
 
   }
 
@@ -128,6 +141,7 @@ body {
     height: 100%;
     background-color: rgba(0,0,0,0.9);
     z-index: 3;
+  
 
     .modal-18 {
 

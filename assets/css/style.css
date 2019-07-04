@@ -3,6 +3,14 @@ html {
   overflow-x: hidden;
 }
 
+html, body {
+  height: 100%;
+}
+
+.navbar-toggler, .navbar-toggler-icon {
+  color: white !important;
+}
+
 .searchBar .searchBarSec {
   border: 0px;
   background-color: rgba(0, 0, 0, 0.486);
@@ -125,6 +133,9 @@ body {
   }
   .mySlides img {
     height: 100%;
+  }
+  .modal-18 h2 {
+    text-align: center;
   }
 }
 

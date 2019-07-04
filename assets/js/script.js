@@ -82,64 +82,36 @@ let currentToggle = myToggle[0]
 
 
 document.addEventListener("click", (event) => {
-
-    currentToggle.classList.remove("jumboFirst")
-
-    if (event.target.classList.contains("myToggle") && event.target != currentToggle) {
-        
-         for (i= 0 ; i < JumboSlides.length ; i++) {
-
-
-            if (JumboSlides[i].classList.contains("jumboSlideOut") ) {
-                JumboSlides[i].classList.remove("jumboSlideOut")
-              
-
-                
-            }
-            if (JumboSlides[i].classList.contains("jumboSlide") || currentToggle.classList.contains("jumboFirst1") ) {
-                JumboSlides[i].classList.remove("jumboSlide");
-                JumboSlides[i].classList.add("jumboSlideOut");
-                currentToggle.classList.remove("jumboFirst1")
-            }
-            event.target.classList.add("jumboFirst")
-            
-        }
- 
-            JumboSlides[myToggleArray.indexOf(event.target)].classList.add("jumboSlide");
-            currentToggle = event.target;
-            currentToggle.classList.add("jumboFirst");
-            JumboSlides[myToggleArray.indexOf(event.target)].style.display = "block";
-
-    }  
+    if (event.target.classList.contains("myToggle") && event.target != currentToggle)  {
+        console.log(myToggleArray.indexOf(currentToggle))
+        JumboSlides[myToggleArray.indexOf(event.target)].classList.add("jumboSlide");
+        JumboSlides[myToggleArray.indexOf(event.target)].classList.remove("jumboSlideOut");
+        JumboSlides[myToggleArray.indexOf(currentToggle)].classList.add("jumboSlideOut");
+    }
+    currentToggle = event.target;
+})  
     
     
-    
-})
+
 
 let automaticToggle = 1;
-
-setTimeout(() => {
-    myToggle[0].classList.remove("jumboFirst1")
-}, 3000)
 
 /*Automatic sliding */
 
  setInterval( () => {
     let currentSlide = JumboSlides[automaticToggle];
     currentSlide.classList.remove("jumboSlideOut")
-    currentSlide.classList.add("jumboFirst")
+
     currentSlide.classList.add("jumboSlide")
     if (automaticToggle != 0) {
         JumboSlides[automaticToggle-1].classList.add("jumboSlideOut")
-        JumboSlides[automaticToggle-1].classList.remove("jumboFirst")
-        JumboSlides[automaticToggle-1].classList.remove("jumboFirst")
+
     } else {
         JumboSlides[3].classList.add("jumboSlideOut")
-       
-
     }
-    
+    currentToggle = myToggleArray[automaticToggle];
     automaticToggle ++;
+    
 
     if (automaticToggle == 4) {
         automaticToggle = 0;
