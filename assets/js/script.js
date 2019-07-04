@@ -87,14 +87,12 @@ document.addEventListener("click", (event) => {
 
     if (event.target.classList.contains("myToggle") && event.target != currentToggle) {
         
-    
-
          for (i= 0 ; i < JumboSlides.length ; i++) {
 
 
             if (JumboSlides[i].classList.contains("jumboSlideOut") ) {
                 JumboSlides[i].classList.remove("jumboSlideOut")
-                JumboSlides[i].style.left = "-100vw";
+              
 
                 
             }
@@ -102,9 +100,6 @@ document.addEventListener("click", (event) => {
                 JumboSlides[i].classList.remove("jumboSlide");
                 JumboSlides[i].classList.add("jumboSlideOut");
                 currentToggle.classList.remove("jumboFirst1")
-                
-
-
             }
             event.target.classList.add("jumboFirst")
             
@@ -123,41 +118,34 @@ document.addEventListener("click", (event) => {
 
 let automaticToggle = 1;
 
-
+setTimeout(() => {
+    myToggle[0].classList.remove("jumboFirst1")
+}, 3000)
 
 /*Automatic sliding */
 
  setInterval( () => {
     let currentSlide = JumboSlides[automaticToggle];
-    let currentToggle = myToggle[automaticToggle];
-   
-   
-    currentToggle.classList.remove("jumboFirst1")
+    currentSlide.classList.remove("jumboSlideOut")
+    currentSlide.classList.add("jumboFirst")
+    currentSlide.classList.add("jumboSlide")
+    if (automaticToggle != 0) {
+        JumboSlides[automaticToggle-1].classList.add("jumboSlideOut")
+        JumboSlides[automaticToggle-1].classList.remove("jumboFirst")
+        JumboSlides[automaticToggle-1].classList.remove("jumboFirst")
+    } else {
+        JumboSlides[3].classList.add("jumboSlideOut")
+       
 
-    for (i= 0 ; i < JumboSlides.length ; i++) {
-        
-        if (JumboSlides[i].classList.contains("jumboSlideOut") ) {
-            JumboSlides[i].classList.remove("jumboSlideOut")
-        }
-        if (JumboSlides[i].classList.contains("jumboSlide") ) {
-            JumboSlides[i].classList.remove("jumboSlide");
-            JumboSlides[i].classList.remove("jumboFirst");
-            JumboSlides[i].classList.add("jumboSlideOut");
+    }
+    
+    automaticToggle ++;
 
-        }
-   
-    }  
-        currentToggle.classList.add("jumboFirst")
-        currentSlide.classList.add("jumboSlide");
-        currentSlide.style.display = "block";
+    if (automaticToggle == 4) {
+        automaticToggle = 0;
+    }
+}, 3000)
 
-        automaticToggle ++;
-
-        if (automaticToggle == 4) {
-            automaticToggle = 0;
-        }
-
-   }  , 2000)
 
 
 

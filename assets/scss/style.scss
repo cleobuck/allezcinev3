@@ -63,11 +63,14 @@ body {
     overflow: hidden;
 }
 
-// fade animation 
-
+// Slide animation 
+.mySlides {
+    display: none;
+}
 .jumboSlide{
    animation: 1s jumboSlide forwards;
-   z-index: -1;
+   display: block;
+   
   }
 
 .jumboSlideOut {
@@ -82,8 +85,9 @@ body {
   }
 
   @keyframes jumboSlideOut {
-    from {left: 0vw;}
-    to { left: -100vw;}
+    0% {left: 0vw;}
+    100% { left: -100vw;}
+
 
   }
   // dot active hover effect 
@@ -329,10 +333,11 @@ body {
     top:10px;
     position: sticky;
     width: 0px;
+    z-index: 10;
     ul {
         position: absolute;
         top: 0;
-        z-index: 10;
+       
     }
 }
 

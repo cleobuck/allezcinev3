@@ -57,10 +57,14 @@ body {
   overflow: hidden;
 }
 
+.mySlides {
+  display: none;
+}
+
 .jumboSlide {
   -webkit-animation: 1s jumboSlide forwards;
           animation: 1s jumboSlide forwards;
-  z-index: -1;
+  display: block;
 }
 
 .jumboSlideOut {
@@ -87,19 +91,19 @@ body {
 }
 
 @-webkit-keyframes jumboSlideOut {
-  from {
+  0% {
     left: 0vw;
   }
-  to {
+  100% {
     left: -100vw;
   }
 }
 
 @keyframes jumboSlideOut {
-  from {
+  0% {
     left: 0vw;
   }
-  to {
+  100% {
     left: -100vw;
   }
 }
@@ -367,12 +371,12 @@ body {
   position: -webkit-sticky;
   position: sticky;
   width: 0px;
+  z-index: 10;
 }
 
 #social-net ul {
   position: absolute;
   top: 0;
-  z-index: 10;
 }
 
 #firstMovieModal .modal-content, #secondMovieModal .modal-content, #thirdMovieModal .modal-content, #fourthMovieModal .modal-content, #fifthMovieModal .modal-content {
