@@ -4,8 +4,8 @@
     * Buck Cleo
     * Jean-David Wilcquot
     * Demey Christophe<br>
-Lien du [site]()
-Lien du [repo](https://github.com/cleobuck/allezcinev3)
+Lien du [site]()<br>
+Lien du [repo](https://github.com/cleobuck/allezcinev3)<br>
 Lien du [Trello](https://trello.com/b/t67ILuY0/le-projet-x)
 
 ---
