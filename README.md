@@ -34,7 +34,7 @@ Et enfin, est venu le moment de rendre le site _responsive_, Et pour ça nous no
 
 ### La newsletter
 Pour ceci, il nous a été demandé de la faire avec des _tables_ ou bien avec <span style="color:orange">HTML5</span>.<br>
-On nous a fourni le lien d'un site [https://putsmail.com/tests/new] afin de faire des tests pour l'envoi de la newsletter. Voir si le contenu s'affiche correctement.
+On nous a fourni le lien d'un site (https://putsmail.com/tests/new)[https://putsmail.com/tests/new] afin de faire des tests pour l'envoi de la newsletter. Voir si le contenu s'affiche correctement.
 
 ---
 
