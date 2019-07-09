@@ -82,34 +82,15 @@ let myToggle = document.getElementsByClassName("myToggle");
 let myToggleArray = Array.from(myToggle)
 let currentToggle = myToggle[0]
 
-
-
-document.addEventListener("click", (event) => {
-    if (event.target.classList.contains("myToggle") && event.target != currentToggle)  {
-        JumboSlides[myToggleArray.indexOf(event.target)].classList.add("jumboSlide");
-        JumboSlides[myToggleArray.indexOf(event.target)].classList.remove("jumboSlideOut");
-        JumboSlides[myToggleArray.indexOf(currentToggle)].classList.add("jumboSlideOut");
-    }
-    currentToggle = event.target;
-    automaticToggle = myToggleArray.indexof(event.target);
-})  
-    
-    
-
-
-
-
 /*Automatic sliding */
 
- setInterval( () => {
+let autoslide = () => {
     let currentSlide = JumboSlides[automaticToggle];
     currentSlide.classList.remove("jumboSlideOut")
-    
 
     currentSlide.classList.add("jumboSlide")
     if (automaticToggle != 0) {
         JumboSlides[automaticToggle-1].classList.add("jumboSlideOut")
-
     } else {
         JumboSlides[3].classList.add("jumboSlideOut")
     }
@@ -120,9 +101,26 @@ document.addEventListener("click", (event) => {
     if (automaticToggle == 4) {
         automaticToggle = 0;
     }
-}, 3000)
+}
+let autoSlideInt = setInterval(autoslide, 3000);
 
 
+/*Click sliding */
+
+document.addEventListener("click", (event) => {
+
+    if (event.target.classList.contains("myToggle") && event.target != currentToggle)  {
+        clearInterval(autoSlideInt);
+        event.target.classList.add("jumboSlide");
+        JumboSlides[myToggleArray.indexOf(event.target)].classList.remove("jumboSlideOut");
+        currentSlide.classList.add("jumboSlideOut");
+    }
+    currentToggle = event.target;
+    automaticToggle = myToggleArray.indexof(event.target);
+    autoslide();
+})  
+    
+    
 
 
                                                                          /* API */
