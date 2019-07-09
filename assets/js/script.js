@@ -73,6 +73,8 @@ if (performance.navigation.type == 1) {
 
                                                           /*JUMBOTRON CAROUSEL */
 
+let automaticToggle = 1;
+
 ///when page loads 
 
 let JumboSlides = document.getElementsByClassName("mySlides");
@@ -81,26 +83,28 @@ let myToggleArray = Array.from(myToggle)
 let currentToggle = myToggle[0]
 
 
+
 document.addEventListener("click", (event) => {
     if (event.target.classList.contains("myToggle") && event.target != currentToggle)  {
-        console.log(myToggleArray.indexOf(currentToggle))
         JumboSlides[myToggleArray.indexOf(event.target)].classList.add("jumboSlide");
         JumboSlides[myToggleArray.indexOf(event.target)].classList.remove("jumboSlideOut");
         JumboSlides[myToggleArray.indexOf(currentToggle)].classList.add("jumboSlideOut");
     }
     currentToggle = event.target;
+    automaticToggle = myToggleArray.indexof(event.target);
 })  
     
     
 
 
-let automaticToggle = 1;
+
 
 /*Automatic sliding */
 
  setInterval( () => {
     let currentSlide = JumboSlides[automaticToggle];
     currentSlide.classList.remove("jumboSlideOut")
+    
 
     currentSlide.classList.add("jumboSlide")
     if (automaticToggle != 0) {
