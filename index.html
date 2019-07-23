@@ -332,7 +332,7 @@
             <!-- Slideshow container -->
                 <div class="slideshow-container">
 
-                    <div class="mySlides">
+                    <div class="mySlides firstSlide">
                         
                         <img src="assets/img/carousel1.jpeg">
                 
@@ -380,11 +380,11 @@
                             Films
                             </a>
                             <div class="dropdown-menu bg-white" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item  href="#">Action</a>
-                            <a class="dropdown-item  href="#">Comédie</a>
-                            <a class="dropdown-item  href="#">Thriller</a>
-                            <a class="dropdown-item  href="#">Sci-fi</a>
-                            <a class="dropdown-item  href="#">Drame</a>
+                            <a href="#featuredFilms" onclick="filmGenre()" class="dropdown-item  href="#">Action</a>
+                            <a href="#featuredFilms" onclick="filmGenre()" class="dropdown-item  href="#">Comédie</a>
+                            <a href="#featuredFilms" onclick="filmGenre()" class="dropdown-item  href="#">Thriller</a>
+                            <a href="#featuredFilms" onclick="filmGenre()" class="dropdown-item  href="#">Sci-fi</a>
+                            <a href="#featuredFilms" onclick="filmGenre()" class="dropdown-item  href="#">Drame</a>
                             </div>
                         </li>
             
@@ -394,20 +394,20 @@
                                 Séries
                             </a>
                             <div class="dropdown-menu bg-white aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item " href="#">Action</a>
-                                <a class="dropdown-item" href="#">Comédie</a>
-                                <a class="dropdown-item" href="#">Thriller</a>
-                                <a class="dropdown-item" href="#">Sci-fi</a>
-                                <a class="dropdown-item" href="#">Drame</a>
+                                <a href="#featuredSeries" class="dropdown-item " href="#">Action</a>
+                                <a href="#featuredSeries" class="dropdown-item" href="#">Comédie</a>
+                                <a href="#featuredSeries" class="dropdown-item" href="#">Thriller</a>
+                                <a href="#featuredSeries" class="dropdown-item" href="#">Sci-fi</a>
+                                <a href="#featuredSeries"class="dropdown-item" href="#">Drame</a>
                             </div>
                             </li>
             
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Shop</a>
+                            <a class="nav-link text-white" href="#shop">Shop</a>
                         </li>
             
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Contact</a>
+                            <a class="nav-link text-white" href="#contact">Contact</a>
                         </li>
             
                         </ul>
@@ -427,7 +427,7 @@
             
                 <div class="myMainToggle w-25 mx-auto pb-5 d-flex flex-row justify-content-center">
             
-                    <span class="myToggle jumboFirst jumboFirst1" ></span>
+                    <span class="myToggle" ></span>
                     <span class="myToggle"></span>
                     <span class="myToggle"></span>
                     <span class="myToggle"></span>
@@ -668,19 +668,19 @@
 
 
             <!----------------------------------------------------------FEATURED FILMS ---------------------------------->
-            <div class="row featMovies container-fluid">
+            <div id="featuredFilms" class="row featMovies container-fluid">
                 <div class="col-md-10 offset-md-2">
                     <span class="border-left border-danger pl-2">FEATURED MOVIES</span>
                 </div>
             </div>
             <div class="row menuFeatMovies container-fluid my-5">
-                <div class="col-8 offset-2 col-md-8 offset-md-2">
-                    <ul class="nav nav-pills d-flex flex-column d-md-block">
+                <div class="col-8 offset-2">
+                    <ul class="nav nav-pills d-flex flex-column flex-md-row">
                         <li class="nav-item">
                             <a class="nav-link active text-white bg-danger">Tous</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Action</a>
+                            <a id="filmAction" class="nav-link">Action</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link">Comédies</a>
@@ -699,12 +699,12 @@
             </div>
             <!-----------------first visible row-->
             <div class="row cardsFeatFilms">
-                <div class="col-md-10 offset-md-2">
+                <div class="col-md-8 offset-md-2">
                     <div class="row">
                         <div class="col-8 offset-2 offset-md-0 col-md-2">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -715,7 +715,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -726,7 +726,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -737,7 +737,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -748,7 +748,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -759,7 +759,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                                 <div class="card-group">
                                     <div class="card text-center">
-                                        <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                        <img src="" class="card-img-top" alt="affiche film">
                                         <div class="card-body">
                                             <h5 class="card-title">Titre film</h5>
                                             <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -781,7 +781,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -792,7 +792,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -803,7 +803,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -814,7 +814,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -825,7 +825,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -836,7 +836,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                                 <div class="card-group">
                                     <div class="card text-center">
-                                        <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                        <img src="" class="card-img-top" alt="affiche film">
                                         <div class="card-body">
                                             <h5 class="card-title">Titre film</h5>
                                             <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -854,7 +854,7 @@
                             <div class="col-8 offset-2 col-md-2 offset-md-0">
                                 <div class="card-group">
                                     <div class="card text-center">
-                                        <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                        <img src="" class="card-img-top" alt="affiche film">
                                         <div class="card-body">
                                             <h5 class="card-title">Titre film</h5>
                                             <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -865,7 +865,7 @@
                             <div class="col-8 offset-2 col-md-2 offset-md-0">
                                 <div class="card-group">
                                     <div class="card text-center">
-                                        <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                        <img src="" class="card-img-top" alt="affiche film">
                                         <div class="card-body">
                                             <h5 class="card-title">Titre film</h5>
                                             <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -876,7 +876,7 @@
                             <div class="col-8 offset-2 col-md-2 offset-md-0">
                                 <div class="card-group">
                                     <div class="card text-center">
-                                        <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                        <img src="" class="card-img-top" alt="affiche film">
                                         <div class="card-body">
                                             <h5 class="card-title">Titre film</h5>
                                             <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -887,7 +887,7 @@
                             <div class="col-8 offset-2 col-md-2 offset-md-0">
                                 <div class="card-group">
                                     <div class="card text-center">
-                                        <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                        <img src="" class="card-img-top" alt="affiche film">
                                         <div class="card-body">
                                             <h5 class="card-title">Titre film</h5>
                                             <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -898,7 +898,7 @@
                             <div class="col-8 offset-2 col-md-2 offset-md-0">
                                 <div class="card-group">
                                     <div class="card text-center">
-                                        <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                        <img src="" class="card-img-top" alt="affiche film">
                                         <div class="card-body">
                                             <h5 class="card-title">Titre film</h5>
                                             <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -909,7 +909,7 @@
                             <div class="col-8 offset-2 col-md-2 offset-md-0">
                                     <div class="card-group">
                                         <div class="card text-center">
-                                            <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                            <img src="" class="card-img-top" alt="affiche film">
                                             <div class="card-body">
                                                 <h5 class="card-title">Titre film</h5>
                                                 <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -932,14 +932,14 @@
 
             <!----------------------------------------------------------FEATURED SERIES ---------------------------------->
 
-            <div class="row featSeries container-fluid">
+            <div id="featuredSeries" class="row featSeries container-fluid">
                 <div class="col-md-8 offset-md-2">
                     <span class="border-left border-danger pl-2">FEATURES SERIES TV</span>
                 </div>
             </div>
             <div class="row menuFeatSeries container-fluid my-5">
                 <div class="col-md-8 offset-md-2">
-                    <ul class="nav nav-pills d-flex flex-column d-md-block">
+                    <ul class="nav nav-pills d-flex flex-column flex-md-row">
                         <li class="nav-item">
                             <a class="nav-link active text-white bg-danger">Tous</a>
                         </li>
@@ -967,7 +967,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -978,7 +978,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -989,7 +989,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1000,7 +1000,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1011,7 +1011,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1022,7 +1022,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1043,7 +1043,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1054,7 +1054,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1065,7 +1065,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1076,7 +1076,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1087,7 +1087,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1098,7 +1098,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1117,7 +1117,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1128,7 +1128,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1139,7 +1139,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1150,7 +1150,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1161,7 +1161,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1172,7 +1172,7 @@
                         <div class="col-8 offset-2 col-md-2 offset-md-0">
                             <div class="card-group">
                                 <div class="card text-center">
-                                    <img src="assets/img/intouchable.jpg" class="card-img-top" alt="affiche film">
+                                    <img src="" class="card-img-top" alt="affiche film">
                                     <div class="card-body">
                                         <h5 class="card-title">Titre film</h5>
                                         <p class="card-text col-md-6"><small class="text">2016</small></p>
@@ -1195,9 +1195,9 @@
             <!----------------------------------------------------------SHOP MOVIE---------------------------------->
 
 
-            <div class="row Shopmovies container-fluid">
+            <div id="shop" class="row Shopmovies container-fluid mt-5">
                 <div class="col-md-10 offset-md-1 shopmovietitle">
-                    <span class="border-left border-danger pl-3">MARCHÉ DE FILMS</span>
+                    <span class="border-left border-danger pl-3">SHOP</span>
                 </div>
             </div>
             <div class="row arrownav">
@@ -1348,7 +1348,7 @@
 
             <!--------------------------------------------------------------Form Contact Us-->
 
-            <div class="rows container-fluid">
+            <div id="contact" class="rows container-fluid mt-5">
                 <div class="col-md-10 offset-md-1">
                     <span class="border-left border-danger pl-3">Contact Us</span>
                 </div>
