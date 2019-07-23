@@ -18,8 +18,6 @@ document.querySelector(".elemContact").addEventListener("click", () => {
     let sujet = document.querySelector("#sujet").value;
     let message = document.querySelector("#votreMessage").value;
 
-
-
     elemNom.value = name
     elemPrenom.value = prenom
     elemMail.value = email
@@ -73,7 +71,6 @@ if (performance.navigation.type == 1) {
 
                                                           /*JUMBOTRON CAROUSEL */
 
-let automaticToggle = 1;
 
 ///when page loads 
 
@@ -81,28 +78,46 @@ let JumboSlides = document.getElementsByClassName("mySlides");
 let myToggle = document.getElementsByClassName("myToggle");
 let myToggleArray = Array.from(myToggle)
 let currentToggle = myToggle[0]
+let autoToggle = 1;
+let slideSpeed = 3000;
 
-/*Automatic sliding */
-
+/*Auto sliding */
 let autoslide = () => {
-    let currentSlide = JumboSlides[automaticToggle];
-    currentSlide.classList.remove("jumboSlideOut")
 
-    currentSlide.classList.add("jumboSlide")
-    if (automaticToggle != 0) {
-        JumboSlides[automaticToggle-1].classList.add("jumboSlideOut")
-    } else {
-        JumboSlides[3].classList.add("jumboSlideOut")
-    }
-    currentToggle = myToggleArray[automaticToggle];
-    automaticToggle ++;
+    let currentSlide = JumboSlides[autoToggle];
     
-
-    if (automaticToggle == 4) {
-        automaticToggle = 0;
+    for (i = 0; i<JumboSlides.length; i++) {
+        if (JumboSlides[i].classList.contains("jumboSlideOut") || JumboSlides[i].classList.contains("jumboSlide")) {
+            JumboSlides[i].classList.remove("jumboSlideOut");
+            JumboSlides[i].classList.remove("jumboSlide");
+        }
     }
+    currentSlide.classList.add("jumboSlide");
+
+    if(autoToggle>1) {
+        JumboSlides[autoToggle-1].classList.add("jumboSlideOut")
+        } else if (autoToggle == 1) {
+        JumboSlides[0].classList.add("jumboSlideOut")
+        }
+        else {
+            JumboSlides[3].classList.add("jumboSlideOut");
+        }
+
+    currentToggle.style.borderColor = "white";
+    currentToggle = myToggleArray[autoToggle];
+    currentToggle.style.borderColor = " #dc3545";
+
+    autoToggle ++;
+
+    if (autoToggle == 4) {
+        autoToggle = 0;
+    }
+    currentSlide = JumboSlides[autoToggle];
 }
-let autoSlideInt = setInterval(autoslide, 3000);
+
+let autoSlideInt = setInterval(autoslide, slideSpeed);
+setTimeout(()=> JumboSlides[0].classList.remove("firstSlide"), slideSpeed);
+
 
 
 /*Click sliding */
@@ -111,18 +126,26 @@ document.addEventListener("click", (event) => {
 
     if (event.target.classList.contains("myToggle") && event.target != currentToggle)  {
         clearInterval(autoSlideInt);
-        event.target.classList.add("jumboSlide");
-        JumboSlides[myToggleArray.indexOf(event.target)].classList.remove("jumboSlideOut");
-        currentSlide.classList.add("jumboSlideOut");
+
+        setTimeout( ()=> {
+            for (i = 0; i < JumboSlides.length; i++) {
+                JumboSlides[i].classList.remove("jumboSlideOut")
+                JumboSlides[i].classList.remove("jumboSlide")
+            }
+            let previousSlide = JumboSlides[myToggleArray.indexOf(currentToggle)];
+            previousSlide.classList.add("jumboSlideOut")
+            autoToggle = myToggleArray.indexOf(event.target);
+            JumboSlides[autoToggle].classList.add("jumboSlide");
+
+            currentToggle.style.borderColor = "white";
+            currentToggle = event.target;
+            currentToggle.style.borderColor = " #dc3545";
+
+            autoSlideInt = setInterval(autoslide, slideSpeed);
+        }, 250);
     }
-    currentToggle = event.target;
-    automaticToggle = myToggleArray.indexof(event.target);
-    autoslide();
-})  
-    
-    
-
-
+});
+  
                                                                          /* API */
 
                                                     

@@ -3,7 +3,7 @@ html {
     overflow-x: hidden;
 }
 
-html, body {
+body {
     height: 100%;
 }
 
@@ -48,9 +48,7 @@ html, body {
     z-index: -2;
     display: none;
     filter: brightness(40%);
-    &:first-child {
-        display: block;
-    }
+    
     img  {
         width: 100%;
     }
@@ -72,17 +70,19 @@ body {
 }
 
 // Slide animation 
-.mySlides {
-    display: none;
+.firstSlide {
+    display: block !important;
 }
 .jumboSlide{
    animation: 1s jumboSlide forwards;
    display: block;
-   
   }
 
 .jumboSlideOut {
     animation: 1s jumboSlideOut forwards;
+    display: block;
+
+    
 }
 
 
@@ -94,7 +94,7 @@ body {
 
   @keyframes jumboSlideOut {
     0% {left: 0vw;}
-    100% { left: -100vw;}
+    100% {left: -100vw;}
 
 
   }
